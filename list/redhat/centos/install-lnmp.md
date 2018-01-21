@@ -53,18 +53,22 @@ cd nginx-1.12.2
 7. 添加链接到/usr/bin 下，便于快速启动
 
 ```bash
+
 sudo ln -s /usr/local/nginx/sbin/nginx /usr/bin/nigix
+
 ```
 
 8. nginx的进程管理
 
 ```bash
+
     sudo nginx                  #启动
     sudo nginx -s stop      #强制停止
     sudo nginx -s quit       #等待nginx任务处理完毕后停止
     sudo nginx -s reload    #重载配置文件
     ##查看进程是否启动
     ps aux|grep nginx
+
 ```
 
 9. 如需开机启动，尝试下列方法
@@ -72,15 +76,19 @@ sudo ln -s /usr/local/nginx/sbin/nginx /usr/bin/nigix
 > 编辑此文件,末尾添加nginx的路径地址
 
 ```bash
+
 vim /etc/rc/local       #添加如下内容到文件末位置
 
 /usr/local/nginx/sbin/nginx
+
 ```
 
 10. 设置执行权限
 
 ```bash
+
     sudo chmod 755 /etc/rc.local
+
 ```
 
 ## 2. 安装PHP
@@ -88,13 +96,17 @@ vim /etc/rc/local       #添加如下内容到文件末位置
 ### 使用yum源安装php
 
 ```bash
+
 sudo yum install php
+
 ```
 
 ### 使用yum安装，安装前，需要安装部分扩展和依赖
 
 ```bash
+
 sudo yum install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-bcmath php-mhash
+
 ```
 
 ### 通过编译安装PHP
@@ -102,7 +114,9 @@ sudo yum install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc 
 ### 安装php7需要的一些依赖库包 libxml2和一些其他依赖的扩展库
 
 ```bash
+
 sudo yum install libxml2 libxml2-devel openssl openssl-devel curl-devel libjpeg-devel libpng-devel freetype-devel bzip2-devel libmcrypt libmcrypt-devel postgresql-devel aspell-devel readline-devel libxslt-devel mysql-devel sqlite-devel gmp-devel db4-devel openldap openldap-devel enchant-devel libvpx-devel libXpm-devel libc-client-devel libicu-devel unixODBC-devel net-snmp-devel
+
 ```
 
 ### 安装前的环境配置检查，php7的一些依赖包的检查和php扩展的启动，这个过程如果缺少php依赖的库包会有报错提示。
@@ -110,18 +124,26 @@ sudo yum install libxml2 libxml2-devel openssl openssl-devel curl-devel libjpeg-
 ### 添加用户和组
 
 ```bash
+
 sudo groupadd -r www
 sudo useradd -r -g www -s /sbin/nologin
+
 ```
 
 ### 开始配置
 
 ```bash
+
 ./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --enable-fpm --with-fpm-user=www --with-fpm-group=www --enable-inline-optimization --disable-debug --disable-rpath --enable-shared --enable-soap --with-xmlrpc --with-openssl --with-mcrypt --with-pcre-regex --with-sqlite3 --with-zlib --enable-bcmath --with-iconv --with-bz2 --enable-calendar --with-curl --with-cdb --enable-dom --enable-exif --enable-fileinfo --enable-filter  --with-pcre-dir --enable-ftp --with-gd --with-openssl-dir --with-jpeg-dir --with-png-dir --with-freetype-dir --enable-gd-native-ttf --enable-gd-jis-conv --with-gettext --with-gmp --with-mhash --enable-json --enable-mbstring --enable-mbregex --enable-mbregex-backtrack --with-libmbfl --with-onig --enable-pdo --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-zlib-dir --with-pdo-sqlite --with-readline --enable-session --enable-shmop --enable-simplexml --enable-sockets --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-wddx --with-libxml-dir --with-xsl --enable-zip --enable-mysqlnd-compression-support --with-pear --enable-opcache
+
 ```
 
 ### 编译 安装
 
 ```bash
+
 make && sudo make install
+
 ```
+
+> 本文有借鉴：[PHP自学网](http://zixuephp.net/article-207.html)

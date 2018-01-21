@@ -13,6 +13,7 @@
     * [CentOS](list/redhat/centos.md)
       * [CentOS安装](list/redhat/centos/install.md)
       * [CentOS配置](list/redhat/centos/config.md)
+      * [CentOS安装LNMP环境](list/redhat/centos/install-lnmp.md)
       * [CentOS美化](list/redhat/centos/beautify.md)
   * [debian系列](list/debian-series.md)
     * [Debian](list/debian/debian.md)

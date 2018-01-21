@@ -19,4 +19,4 @@
 
 1. [Linux中国](https://linux.cn/ "技术文章分享，期待对你有所帮助")
 
-1. [演示Linux桌面的相关视频](./listall.md)
+1. [我是菜鸟](https://imcn.me/ "我是菜鸟Linux资讯")
