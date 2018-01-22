@@ -22,3 +22,13 @@
 1. [Linux中国](https://linux.cn/ "技术文章分享，期待对你有所帮助")
 
 1. [我是菜鸟](https://imcn.me/ "我是菜鸟Linux资讯")
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4223bde49487a942b437910913808dfa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
