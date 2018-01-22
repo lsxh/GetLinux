@@ -98,7 +98,7 @@ sudo chmod 755 /etc/rc.local
 sudo yum install php
 ```
 
-### 使用yum安装，安装前，需要安装部分扩展和依赖
+1. 使用yum安装，需要安装的部分扩展和依赖
 
 ```bash
 sudo yum install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-bcmath php-mhash
@@ -106,28 +106,28 @@ sudo yum install php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc 
 
 ### 通过编译安装PHP
 
-### 安装php7需要的一些依赖库包 libxml2和一些其他依赖的扩展库
+1. 安装php7需要的一些依赖库包 libxml2和一些其他依赖的扩展库
 
 ```bash
 sudo yum install libxml2 libxml2-devel openssl openssl-devel curl-devel libjpeg-devel libpng-devel freetype-devel bzip2-devel libmcrypt libmcrypt-devel postgresql-devel aspell-devel readline-devel libxslt-devel mysql-devel sqlite-devel gmp-devel db4-devel openldap openldap-devel enchant-devel libvpx-devel libXpm-devel libc-client-devel libicu-devel unixODBC-devel net-snmp-devel
 ```
 
-### 安装前的环境配置检查，php7的一些依赖包的检查和php扩展的启动，这个过程如果缺少php依赖的库包会有报错提示。
+> 安装前的环境配置检查，php7的一些依赖包的检查和php扩展的启动，这个过程如果缺少php依赖的库包会有报错提示。
 
-### 添加用户和组
+2. 添加用户和组
 
 ```bash
 sudo groupadd -r www
 sudo useradd -r -g www -s /sbin/nologin
 ```
 
-### 开始配置
+3. 开始配置
 
 ```bash
 ./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php/etc --enable-fpm --with-fpm-user=www --with-fpm-group=www --enable-inline-optimization --disable-debug --disable-rpath --enable-shared --enable-soap --with-xmlrpc --with-openssl --with-mcrypt --with-pcre-regex --with-sqlite3 --with-zlib --enable-bcmath --with-iconv --with-bz2 --enable-calendar --with-curl --with-cdb --enable-dom --enable-exif --enable-fileinfo --enable-filter  --with-pcre-dir --enable-ftp --with-gd --with-openssl-dir --with-jpeg-dir --with-png-dir --with-freetype-dir --enable-gd-native-ttf --enable-gd-jis-conv --with-gettext --with-gmp --with-mhash --enable-json --enable-mbstring --enable-mbregex --enable-mbregex-backtrack --with-libmbfl --with-onig --enable-pdo --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-zlib-dir --with-pdo-sqlite --with-readline --enable-session --enable-shmop --enable-simplexml --enable-sockets --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-wddx --with-libxml-dir --with-xsl --enable-zip --enable-mysqlnd-compression-support --with-pear --enable-opcache
 ```
 
-### 编译 安装
+4. 编译 安装
 
 ```bash
 make && sudo make install
@@ -170,6 +170,7 @@ systemctl stop mariadb      #停止服务
 
 5. 对 MariaDB 进行安全配置
 > 通过这项命令，设置 MariaDB 的 root 账户密码，禁用 root 远程登录，删除测试数据库以及测试帐号，最后需要使用下面的命令重新加载权限。使用前，请确保你已经启动了MariaDB服务，否则将报错。
+
 ```bash
 mysql_secure_installation
 ```
@@ -180,7 +181,8 @@ mysql -u root -p
 ```
 
 ### 通过编译安装MariaDB
-
-> 待续。。。
+```bash
+待续
+```
 
 > 本文有借鉴：[PHP自学网](http://zixuephp.net/article-207.html)，[Linux就该这样学](http://www.linuxprobe.com/centos7-mariadb10-easy.html)

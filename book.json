@@ -13,7 +13,8 @@
 		"copy-code-button",
 		"sectionx",
         "favicon",
-      	"back-to-top-button"
+		"back-to-top-button",
+		"baidu"
 	],
 	"pluginsConfig":{
 		"tbfed-pagefooter":{
@@ -28,7 +29,10 @@
             "shortcut": "../assets/images/favicon.ico",
             "bookmark": "../assets/images/favicon.ico"
         },
-      	"expandable-chapters":{}
+		  "expandable-chapters":{},
+		  "baidu":{
+			  "token":"4223bde49487a942b437910913808dfa"
+		  }
 	}
 
 }
