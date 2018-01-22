@@ -12,6 +12,8 @@
 
 1. [鸟哥的私房菜](http://linux.vbird.org/)
 
+1. [Linux就该这样学](http://www.linuxprobe.com/)
+
 ---
 一些与Linux有关并且随时可能对你有帮助的网站：
 

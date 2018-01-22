@@ -7,5 +7,6 @@
     "MD029": {
         "style":"one"
     },
+    "MD031":false,
     "no-hard-tabs": false
 }
