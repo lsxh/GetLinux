@@ -14,7 +14,7 @@ xuthus:
 
 联系方式
 
-| name | 低调小怪 | xuthus |
+| name | xuthus | 低调小怪 |
 | --- | --- | --- |
 | QQ | 2301835435 | 1397190480 |
 | Email | lsxgls@qq.com | xuthus5@qq.com |
