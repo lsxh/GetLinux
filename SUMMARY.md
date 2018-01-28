@@ -25,11 +25,8 @@
     * [deepin](list/debian/deepin.md)
       * [deepin安装](list/debian/deepin/install.md)
       * [deepin配置](list/debian/deepin/config.md)
-<<<<<<< HEAD
         * [root用户设置](list/debian/deepin/rootconfig.md)
         * [lnmp环境搭建](list/debian/deepin/lnmpconfig.md)
-=======
->>>>>>> cb00a0a5d3a3a7b62cf0d2d77a33bc1c01d36309
     * [Linux Mint](list/debian/linuxMint.md)
       * [Mint安装](list/debian/mint/install.md)
       * [Mint配置](list/debian/mint/config.md)
