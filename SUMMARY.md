@@ -18,18 +18,18 @@
   * [debian系列](list/debian-series.md)
     * [Debian](list/debian/debian.md)
       * [Debian安装](list/debian/debian/install.md)
-      * [Debian美化](list/debian/debian/beautify.md)
       * [Debian配置](list/debian/debian/config.md)
     * [Ubuntu](list/debian/ubuntu.md)
       * [Ubuntu安装](list/debian/ubuntu/install.md)
-      * [Ubuntu美化](list/debian/ubuntu/beautify.md)
       * [Ubuntu配置](list/debian/ubuntu/config.md)
     * [deepin](list/debian/deepin.md)
       * [deepin安装](list/debian/deepin/install.md)
-      * [deepins设置](list/debian/deepin/beautify.md)
       * [deepin配置](list/debian/deepin/config.md)
+<<<<<<< HEAD
         * [root用户设置](list/debian/deepin/rootconfig.md)
         * [lnmp环境搭建](list/debian/deepin/lnmpconfig.md)
+=======
+>>>>>>> cb00a0a5d3a3a7b62cf0d2d77a33bc1c01d36309
     * [Linux Mint](list/debian/linuxMint.md)
       * [Mint安装](list/debian/mint/install.md)
       * [Mint配置](list/debian/mint/config.md)
@@ -53,4 +53,5 @@
   * [Linux历史](knowledge-base/history/history.md)
   * [发行版本集合](listall.md)
 * [镜像](images.md)
+* [投稿](contribute.md)
 * [关于我们](about.md)
