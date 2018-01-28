@@ -48,4 +48,5 @@
   * [Linux历史](knowledge-base/history/history.md)
   * [发行版本集合](listall.md)
 * [镜像](images.md)
+* [投稿](contribute.md)
 * [关于我们](about.md)
