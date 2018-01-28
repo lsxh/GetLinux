@@ -8,6 +8,7 @@
     * 回车，设置root密码（输入时不会显示任何东西）
 
     ![img](../public/deepin/r-1.png)
+
     ![img](../public/deepin/r-2.png)
 
 1. 使用root登录：
@@ -16,4 +17,5 @@
     * 输入 exit 退出root用户
 
     ![img](../public/deepin/r-3.png)
+
     ![img](../public/deepin/r-4.png)
