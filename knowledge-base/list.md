@@ -4,6 +4,7 @@
 1. [文件系统](./base/Disk-knowledge/FileSystem.md)
 1. [簇大小](./base/Disk-knowledge/ClusterSize.md)
 1. [分区相关](待完善)
+1. [包管理](./Package-Management/list.md)
 
 ## 发展史
 
