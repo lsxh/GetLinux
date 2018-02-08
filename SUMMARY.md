@@ -51,7 +51,7 @@
       * [什么是分区](konwledge-base/base/Disk-Partition/what-is-disk-partition.md)
       * [分区方案](knowledge-base/base/Disk-Partition/partition-scheme.md)
   * [软件包管理](knowledge-base/Package-Management/list.md)
-    * [dpkg包管理](knowledge-base/Package-Management/dpkg.md)
+    * [dpkg包管理](https://wiki.deepin.org/index.php?title=软件包管理#.E5.89.8D.E8.A8.80)
   * [Linux历史](knowledge-base/history/history.md)
   * [发行版本集合](listall.md)
 * [镜像](images.md)
