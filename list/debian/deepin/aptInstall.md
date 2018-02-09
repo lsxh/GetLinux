@@ -6,10 +6,33 @@
 
 下面我们介绍如何在深度操作系统下使用命令管理软件包,管理功能包括:安装/管理单个软件包/升级软件套件
 
-* 升级软件套件：sudo apt-get update
-* 升级软件套件：sudo apt-get upgrade
-* 安装g：sudo apt-get install g
-* 安装g++:sudo apt-get install g++
-* 卸载一个已安装的软件包（保留配置文件）:apt-get remove package_name
+* 升级软件套件：
 
-apkg包管理的其他相关知识详见[apkg包管理](https://wiki.deepin.org/index.php?title=软件包管理#.E5.89.8D.E8.A8.80)
+```bash
+sudo apt-get update
+```
+
+* 升级软件套件：
+
+```bash
+sudo apt-get upgrade
+```
+
+* 安装g：
+
+```bash
+sudo apt-get install g
+```
+
+* 安装g++:
+
+```bash
+sudo apt-get install g++
+```
+
+* 卸载一个已安装的软件包（保留配置文件）:
+
+```bash
+apt-get remove package_name
+```
+**apkg包管理的其他相关知识详见[apkg包管理](https://wiki.deepin.org/index.php?title=软件包管理#.E5.89.8D.E8.A8.80)**
