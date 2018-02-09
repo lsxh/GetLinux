@@ -53,6 +53,7 @@
   * [软件包管理](knowledge-base/Package-Management/list.md)
     * [dpkg包管理](https://wiki.deepin.org/index.php?title=软件包管理#.E5.89.8D.E8.A8.80)
   * [Linux历史](knowledge-base/history/history.md)
+  * [Linux牛人](knowledge-base/supermen/supermen.md)
   * [发行版本集合](listall.md)
 * [镜像](images.md)
 * [投稿](contribute.md)
