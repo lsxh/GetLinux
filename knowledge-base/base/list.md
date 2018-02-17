@@ -10,9 +10,9 @@
 
 ## 磁盘分区
 
-* [什么是分区](./Disk-Partition/what-disk-partition.md)
+* [什么是分区](./Disk-knowledge/what-disk-partition.md)
 
-* [分区方案](./Disk-Partition/partition-scheme.md)
+* [分区方案](./Disk-knowledge/partition-scheme.md)
 
 ## 虚拟机安装
 
