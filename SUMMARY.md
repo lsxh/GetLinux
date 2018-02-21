@@ -59,6 +59,8 @@
         * [分区方案](knowledge-base/base/Disk-knowledge/partition-scheme.md)
   * [软件包管理](knowledge-base/Package-Management/list.md)
     * [dpkg包管理](https://wiki.deepin.org/index.php?title=软件包管理#.E5.89.8D.E8.A8.80)
+  * [常用软件安装](software/index.md)
+    * [安装JDK](software/install-jdk.md)
   * [Linux历史](knowledge-base/history/history.md)
   * [Linux牛人](knowledge-base/supermen/supermen.md)
   * [发行版本集合](listall.md)
