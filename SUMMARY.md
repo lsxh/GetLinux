@@ -35,7 +35,7 @@
       * [Mint配置](list/debian/mint/config.md)
     * [Elementary OS](list/debian/elementaryOS.md)
       * [Elementary安装](list/debian/elementary/install.md)
-      * [Elementary配置](list/debian/elementary/config.md)
+      * [Elementary美化](list/debian/elementary/beautify.md)
     * [麒麟](list/debian/kylin.md)
       * [kylin安装](list/debian/kylin/install.md)
       * [kylin配置](list/debian/kylin/config.md)
