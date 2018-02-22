@@ -1,6 +1,6 @@
 # Elementary OS 安装
 
-> elementary OS 是一个由设计师主导的发行版，在风格上有点类似Mac OS（panel + dock），并且使用了ChromeOS 的应用菜单设计，而系统的核心使用Ubuntu，所以你能在elementary OS Luna 里面看到Mac OS + ChromeOS + Ubuntu + Gnome Shell 的身影。--《知乎》
+> elementary OS 是一个由设计师主导的发行版，在风格上有点类似Mac OS（panel + dock），并且使用了ChromeOS 的应用菜单设计，所以你能在elementary OS Luna 里面看到Mac OS + ChromeOS + Ubuntu + Gnome Shell 的身影。系统的核心依然是 Ubuntu，完全兼容该系统的所有软件包。--《百度百科》
 
 **安装环境** ：windows10+VirtualBox虚拟机+20G虚拟磁盘空间+Elementary OS 0.4.1版本镜像文件
 
