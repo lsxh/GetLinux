@@ -6,13 +6,15 @@
 
 **提示：** 建议新手不要玩弄此系统，下面安装过程[分区方案使用UEFI+GPT] 需你的电脑支持并开启UEFI，我这里 使用的是VirtualBox 在虚拟机设置里面开启[此处不开启 将导致引导分区无法写入]。方便起见，建议使用分区方案二BIOS+MBR
 
+![开启EFI](../public/archlinux/install/support-efi.png)
+
 ## 安装开始
 
 > 配置好虚拟机后，点击启动，进入界面有如下两种可能，都是选择第一个选项
 
 > UEFI启动 (后面的分区操作 建议使用方案一)
 
-![开启EFI](../public/archlinux/install/support-efi.png)
+![使用EFI进入](../public/archlinux/install/1.png)
 
 > BIOS启动 (后面的操作使用方案二)
 
