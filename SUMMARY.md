@@ -24,6 +24,8 @@
       * [Ubuntu安装](list/debian/ubuntu/install.md)
       * [Ubuntu美化](list/debian/ubuntu/beautify.md)
       * [Ubuntu配置](list/debian/ubuntu/config.md)
+        * [语言设置](list/debian/ubuntu/language.md)
+        * [root用户设置](list/debian/ubuntu/rootconfig.md)
     * [deepin](list/debian/deepin.md)
       * [deepin安装](list/debian/deepin/install.md)
       * [deepin美化](list/debian/deepin/beautify.md)
