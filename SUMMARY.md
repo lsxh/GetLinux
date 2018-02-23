@@ -43,6 +43,7 @@
   * [其他系列](list/other-series.md)
     * [Arch](list/archlinux/archlinux.md)
       * [Arch安装](list/archlinux/archlinux/install.md)
+      * [Arch配置](list/archlinux/archlinux/config.md)
   * [UNIX系列](list/unix-series.md)
 * [知识库](knowledge-base/list.md)
   * [基础](knowledge-base/base/list.md)

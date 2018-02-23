@@ -93,6 +93,7 @@ systemctl enable ntpd
 pacman -S ntfs-3g  
 #
 ```
+--《其他内容待添加》
 
 ## 本文有借鉴
 
