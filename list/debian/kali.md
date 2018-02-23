@@ -1,1 +1,1 @@
-# kali
+# 优麒麟（Ubuntu Kylin）
