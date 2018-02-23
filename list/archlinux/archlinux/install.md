@@ -8,6 +8,10 @@
 
 ## 安装开始
 
+> 下面安装过程[分区方案使用UEFI+GPT] 需你的电脑支持并开启UEFI，我这里 使用的是VirtualBox 在虚拟机设置里面开启[此处不开启 将导致引导分区无法写入]
+
+![开启EFI](../public/archlinux/install/support-efi.png)
+
 > 配置好虚拟机后，点击启动，进入如下界面，选择第一个选项
 
 ![启动虚拟机](../public/archlinux/install/1.png)
@@ -36,7 +40,7 @@ timedatectl set-ntp true
 ```bash
 #编辑仓库源文件
 vi /etc/pacman.d/mirrorlist
-#在文件的最顶端添加如下内容(我的这里已经有一个中国国内源了)
+#在文件的最顶端添加如下内容(我这里有一个默认的中国国内源，但是速度不够快)
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 #更新软件包缓存
@@ -86,7 +90,7 @@ fdisk /dev/sda
 
 ![开始分区2](../public/archlinux/install/10.png)
 
-> 新建第三个分区，此分区为 SWAP 交换分区 ,输入 回车(默认分区数)，回车(默认扇出开始2048),输入  **+1G**,设置分区大小为1G
+> 新建第三个分区，此分区为 SWAP 交换分区 ,输入 回车(默认分区数)，回车(默认扇出),输入  **+1G**,设置分区大小为1G
 
 ![开始分区3](../public/archlinux/install/11.png)
 
@@ -191,13 +195,7 @@ ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc --utc
 ```
 
-> 设置root密码
-
-```bash
-passwd
-```
-
-> 引导系统 GRUB进行UEFI引导 安装引导工具
+> 引导系统 安装GRUB进行UEFI引导的工具
 
 ```bash
 pacman -S dosfstools grub efibootmgr
@@ -245,13 +243,13 @@ exit
 reboot
 ```
 
-> 重启 进入网络配置
+> 重启电脑 出现如下界面 代表你的arch已经安装完毕
 
-```bash
-#启动dhcpcd有线连接
-sudo systemctl start dhcpcd
-#开机自动启动dhcp服务
-sudo systemctl enable dhcpcd
-```
+![安装完毕](../public/archlinux/install/start.png)
 
---<待续>
+> 回车进入系统，安装过程完成
+
+## 本文有借鉴
+
+1. [Arch Linux-wiki](https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+1. [CSDN](http://blog.csdn.net/r8l8q8/article/details/76516523)
