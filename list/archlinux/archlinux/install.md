@@ -4,17 +4,21 @@
 
 **安装环境** ：windows10+VirtualBox虚拟机+16G虚拟磁盘空间+archlinux-2018.02.01-x86_64版本镜像文件
 
-**提示：** 建议新手不要玩弄此系统
-
-## 安装开始
-
-> 下面安装过程[分区方案使用UEFI+GPT] 需你的电脑支持并开启UEFI，我这里 使用的是VirtualBox 在虚拟机设置里面开启[此处不开启 将导致引导分区无法写入]
+**提示：** 建议新手不要玩弄此系统，下面安装过程[分区方案使用UEFI+GPT] 需你的电脑支持并开启UEFI，我这里 使用的是VirtualBox 在虚拟机设置里面开启[此处不开启 将导致引导分区无法写入]。方便起见，建议使用分区方案二BIOS+MBR
 
 ![开启EFI](../public/archlinux/install/support-efi.png)
 
-> 配置好虚拟机后，点击启动，进入如下界面，选择第一个选项
+## 安装开始
 
-![启动虚拟机](../public/archlinux/install/1.png)
+> 配置好虚拟机后，点击启动，进入界面有如下两种可能，都是选择第一个选项
+
+> UEFI启动 (后面的分区操作 建议使用方案一)
+
+![使用EFI进入](../public/archlinux/install/1.png)
+
+> BIOS启动 (后面的操作使用方案二)
+
+![开启BIOS](../public/archlinux/install/1.1.png)
 
 > 经过短暂的系统加载后，会来到如下界面，这以为着你可以开始操作他了。
 
@@ -38,7 +42,7 @@ timedatectl set-ntp true
 > 编辑镜像站文件 由于软件仓库源多数为国外网站，在进行系统安装时，下载网速可能特别慢。先检查一下仓库源文件是否有中国源，没有的话添加，在这里我们使用清华大学源
 
 ```bash
-#编辑仓库源文件
+#编辑仓库源文件 可以用vi或者nano编辑器
 vi /etc/pacman.d/mirrorlist
 #在文件的最顶端添加如下内容(我这里有一个默认的中国国内源，但是速度不够快)
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
@@ -48,7 +52,7 @@ pacman -Syy
 ```
 ![添加源](../public/archlinux/install/4.png)
 
-## 进行磁盘分区
+## 两种磁盘分区方案，请任选其一
 
 ```bash
 #查看系统的硬盘设备 有两个命令lsblk或者fdisk -l,两个任选其一
@@ -58,7 +62,11 @@ fdisk -l  #详细显示硬盘信息
 
 ![显示硬盘信息](../public/archlinux/install/5.png)
 
-> 由上面可以发现，/dev/sda 为我们的安装盘，我们为sda硬盘重新建立分区表[假若你对fdisk命令不熟悉，建议先不尝试往下进行,点击 [这里查看fdisk命令](http://blog.csdn.net/virus_1996/article/details/51523584) ]。分区方案为：
+> 由上面可以发现，/dev/sda 为我们的安装盘，我们为sda硬盘重新建立分区表[假若你对fdisk命令不熟悉，建议先不尝试往下进行,点击 [这里查看fdisk命令](http://blog.csdn.net/virus_1996/article/details/51523584) ]。
+
+### 方案一：UEFI+GPT
+
+> 分区方案为：
 
 ```bash
 /dev/sda1  200M  /boot/EFi
@@ -137,6 +145,71 @@ mount /dev/sda1 /mnt/boot/EFI   #挂载/boot/EFI
 
 ![检查磁盘信息](../public/archlinux/install/16.png)
 
+### 方案二：BIOS+MBR
+
+> 分区方案为：
+
+```bash
+/dev/sda2  200M  /boot
+/dev/sda3  1G    swap
+/dev/sda3  14G   /
+```
+
+> 用fdisk进行分区,执行fdisk /dev/sda 进入fdisk交互界面
+
+```bash
+fdisk /dev/sda
+```
+![执行fdisk](../public/archlinux/install/6.png)
+
+> 输入  **n**  添加分区，此分区用来挂载/boot，选择 默认的分区种类 **p** 为主分区，设置大小200M
+
+![新建分区1](../public/archlinux/install/1.2.png)
+
+> 新建第二个分区，此分区为swap交换分区 大小1G
+
+![开始分区2](../public/archlinux/install/1.3.png)
+
+> 新建第三个分区，此分区为 / 根分区,分配所有空闲磁盘到此分区
+
+![开始分区3](../public/archlinux/install/1.4.png)
+
+> 查看分区列表 输入 **p**
+
+![查看分区列表](../public/archlinux/install/1.5.png)
+
+> 保存修改后的分区方案 输入 **w**
+
+![保存分区方案](../public/archlinux/install/14.png)
+
+## 格式化分区
+
+> 执行如下命令 进行分区格式化
+
+```bash
+mkfs.ext4 /dev/sda1  #此分区为/boot
+mkswap /dev/sda2  # 此为交换分区格式化
+swapon /dev/sda2  # 此命令开启交换分区
+mkfs.ext4 /dev/sda3  #此分区为根分区
+```
+
+![格式化分区](../public/archlinux/install/1.6.png)
+
+## 挂载分区
+
+> 执行如下命令进行挂载
+
+```bash
+#执行挂载
+mount /dev/sda3 /mnt    #挂载根分区
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot   #挂载/boot分区
+```
+
+> 挂载完成后 查看磁盘信息
+
+![检查磁盘信息](../public/archlinux/install/1.7.png)
+
 ## 安装操作系统
 
 > 现在开始安装基本的操作系统
@@ -198,7 +271,8 @@ hwclock --systohc --utc
 > 引导系统 安装GRUB进行UEFI引导的工具
 
 ```bash
-pacman -S dosfstools grub efibootmgr
+pacman -S dosfstools grub efibootmgr #分区方案一使用
+pacman -S grub os-prober    #分区方案二使用
 ```
 
 ![安装引导工具](../public/archlinux/install/20.png)
@@ -206,7 +280,8 @@ pacman -S dosfstools grub efibootmgr
 > 安装grub
 
 ```bash
-grub-install --target=x86_64-efi --efi-directory=/boot/EFI --recheck
+grub-install --target=x86_64-efi --efi-directory=/boot/EFI --recheck #分区方案一使用
+grub-install --target=i386-pc --recheck /dev/sda    #分区方案二使用
 ```
 
 > 配置grub
@@ -248,6 +323,8 @@ reboot
 ![安装完毕](../public/archlinux/install/start.png)
 
 > 回车进入系统，安装过程完成
+
+![安装完毕](../public/archlinux/install/end.png)
 
 ## 本文有借鉴
 
