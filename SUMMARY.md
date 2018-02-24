@@ -39,7 +39,7 @@
     * [Elementary OS](list/debian/elementaryOS.md)
       * [Elementary安装](list/debian/elementary/install.md)
       * [Elementary美化](list/debian/elementary/beautify.md)
-    * [麒麟](list/debian/kylin.md)
+    * [优麒麟](list/debian/kylin.md)
       * [kylin安装](list/debian/kylin/install.md)
       * [kylin配置](list/debian/kylin/config.md)
   * [其他系列](list/other-series.md)
