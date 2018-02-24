@@ -26,6 +26,8 @@
 
     ![img](../public/kylin/install-6.png)
 
+安装过程没有选择语言，默认是英文的，[点这里](./language.md)设置中文
+
 - 看这界面，既有Ubuntu的图标样式，又有window的风格。
 
 **安装好UbuntuKylin都想快速上手，下面的链接看看是否优帮助**

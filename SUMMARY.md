@@ -42,6 +42,7 @@
     * [优麒麟](list/debian/kylin.md)
       * [kylin安装](list/debian/kylin/install.md)
       * [kylin配置](list/debian/kylin/config.md)
+        * [语言设置](list/debian/kylin/language.md)
   * [其他系列](list/other-series.md)
     * [Arch](list/archlinux/archlinux.md)
       * [Arch安装](list/archlinux/archlinux/install.md)
