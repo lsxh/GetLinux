@@ -12,12 +12,12 @@
 
 1. Debian    [下载官网](https://www.debian.org/ "下载官网")
 1. Ubuntu    [下载官网](https://www.ubuntu.com/download "下载官网")
-  1. Kubuntu
-  2. Bodhi Linux
-  3. KDE Neon
+    1. Kubuntu
+    1. Bodhi Linux
+    1. KDE Neon
 1. Deepin    [下载官网](https://www.deepin.org/ "下载官网")
 1. Linux Mint    [下载官网](https://www.linuxmint.com/ "下载官网")
-  1. feren OS
+    1. feren OS
 1. Elementary OS    [下载官网](https://elementary.io/ "下载官网")
 1. Kali    [下载官网](https://www.kali.org/ "下载官网")
 1. Tails    [下载官网](https://tails.boum.org/ )
@@ -33,12 +33,12 @@
 ## 其他系列
 
 1. Arch Linux    [下载官网](https://www.archlinux.org/ )
-  1. Manjaro    [下载官网](http://manjaro.github.io/ )
-  1. Antergos
+    1. Manjaro    [下载官网](http://manjaro.github.io/ )
+    1. Antergos
 1. openSUSE    [下载官网](https://www.opensuse.org/ )
-  1. GeckoLinux  [下载官网](https://www.opensuse.org/ )
+    1. GeckoLinux  [下载官网](https://www.opensuse.org/ )
 1. Gentoo    [下载官网](https://www.gentoo.org/ )
-  1. Calculate Linux
+    1. Calculate Linux
 1. coreos    [下载官网](https://coreos.com/ )
 1. chrome os    [下载地址](http://www.getchrome.eu/download )
 1. Mandriva Linux    [下载地址](http://mandriva.linuxfreedom.com/download.html )
